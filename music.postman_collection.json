@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "5d9b5de7-9cbe-4b86-ad49-05b4d3533ef5",
+		"name": "music",
+		"description": "version=1.0   all things music",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "music",
+			"description": "Folder for music",
+			"item": [
+				{
+					"name": "get all music",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http:///music",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"music"
+							]
+						},
+						"description": "get all music"
+					},
+					"response": [
+						{
+							"id": "29817148-a395-47fa-b5cf-a68d12ecf058",
+							"name": "get all music",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http:///music",
+									"host": [
+										"http:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"music"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t\"name\": \"her eis the mock bach\",\n\t\"category\": \"classical\",\n\t\"id\": 1,\n\t\"region\": \"all west\"\n}"
+						}
+					]
+				},
+				{
+					"name": "edit all music",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "put music type here for edit"
+						},
+						"url": {
+							"raw": "http:///music",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"music"
+							]
+						},
+						"description": "edit all music"
+					},
+					"response": []
+				},
+				{
+					"name": "put new music",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "send music type"
+						},
+						"url": {
+							"raw": "http:///music",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"music"
+							]
+						},
+						"description": "put new music"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6dd6ac82-73e1-4a65-8fc0-869380dadb56",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "adba2caa-e800-45e7-bc87-98a80e26f3e8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
