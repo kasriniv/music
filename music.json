@@ -1,0 +1,86 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "music",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/music": {
+      "get": {
+        "summary": "get all music",
+        "description": "get all music",
+        "responses": {
+          "200": {
+            "description": "all good",
+            "schema": {
+              "$ref": "#/definitions/music"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "edit all music",
+        "description": "edit all music",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "put music type here for edit",
+            "schema": {
+              "$ref": "#/definitions/music"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "whenall good"
+          }
+        }
+      },
+      "post": {
+        "summary": "put new music",
+        "description": "put new music",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "send music type",
+            "schema": {
+              "$ref": "#/definitions/music"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "when all good",
+            "schema": {
+              "$ref": "#/definitions/music"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "music": {
+      "title": "Root Type for music",
+      "description": "The root of the music type's schema.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "region": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
