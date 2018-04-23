@@ -1,0 +1,91 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "music"
+  },
+  "paths" : {
+    "/music" : {
+      "get" : {
+        "summary" : "get all music",
+        "description" : "get all music",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "all good",
+            "schema" : {
+              "$ref" : "#/definitions/music"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      },
+      "post" : {
+        "summary" : "put new music",
+        "description" : "put new music",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "send music type",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/music"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "when all good",
+            "schema" : {
+              "$ref" : "#/definitions/music"
+            }
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      },
+      "put" : {
+        "summary" : "edit all music",
+        "description" : "edit all music",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "put music type here for edit",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/music"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "whenall good"
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      }
+    }
+  },
+  "definitions" : {
+    "music" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "region" : {
+          "type" : "string"
+        }
+      },
+      "title" : "Root Type for music",
+      "description" : "The root of the music type's schema."
+    }
+  }
+}
