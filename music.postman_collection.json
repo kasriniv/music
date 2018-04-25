@@ -12,6 +12,24 @@
 			"item": [
 				{
 					"name": "get all music",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "be026c31-2de4-4a82-a01d-d4c103b95e10",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response must be valid and have a body\", function () {",
+									"     // assert that the status code is 200",
+									"     pm.response.to.be.ok; // info, success, redirection, clientError,  serverError, are other variants",
+									"     // assert that the response has a valid JSON body",
+									"     pm.response.to.be.withBody;",
+									"     pm.response.to.be.json; // this assertion also checks if a body  exists, so the above check is not needed",
+									"});"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -32,7 +50,7 @@
 					},
 					"response": [
 						{
-							"id": "29817148-a395-47fa-b5cf-a68d12ecf058",
+							"id": "c157dbe5-e662-46bb-b036-fe7dbb6e303f",
 							"name": "get all music",
 							"originalRequest": {
 								"method": "GET",
