@@ -16,10 +16,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "262471ea-5b16-4e5c-8e94-e9eb94dc49ca",
+								"id": "5a44cc5b-310d-4d2e-a4f0-57fcf3044317",
 								"type": "text/javascript",
 								"exec": [
-									"var expectedName = globals[\"name\"];",
+									"//var expectedName = globals[\"name\"];",
+									"var expectedName=\"My fav implmentation kind\";",
 									"var jsonData = JSON.parse(responseBody);",
 									"console.log(\"test1\");",
 									"",
@@ -59,7 +60,7 @@
 					},
 					"response": [
 						{
-							"id": "08c489fb-eb8a-44df-818f-15474454396d",
+							"id": "18bb78d2-634c-4b3d-8179-ab88f052e2a2",
 							"name": "get all music",
 							"originalRequest": {
 								"method": "GET",
