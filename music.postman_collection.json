@@ -16,7 +16,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5a44cc5b-310d-4d2e-a4f0-57fcf3044317",
+								"id": "6cc0737a-ff65-438f-baf8-ec80ecf8acd8",
 								"type": "text/javascript",
 								"exec": [
 									"//var expectedName = globals[\"name\"];",
@@ -35,7 +35,11 @@
 									"  }",
 									"};",
 									"",
-									"tests[\"Valid name in response\"] = tv4.validate(jsonData, schema);"
+									"tests[\"Valid name in response\"] = tv4.validate(jsonData, schema);",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"fav\");",
+									"});"
 								]
 							}
 						}
@@ -60,7 +64,7 @@
 					},
 					"response": [
 						{
-							"id": "18bb78d2-634c-4b3d-8179-ab88f052e2a2",
+							"id": "1f444bb2-cac0-4b0b-a1d9-b04d9639f6f2",
 							"name": "get all music",
 							"originalRequest": {
 								"method": "GET",
